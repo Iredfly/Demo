@@ -1,0 +1,5 @@
+2018-12-18 20:24:02.9819 | /api/User/BindMobile # 接口入参 # {"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}} #  
+2018-12-18 20:24:03.7639 |  
+2018-12-18 20:24:03.8206 | /api/User/BindMobile # 接口出参:{"Code":200,"Message":"","RespTime":"2018-12-18 20:24:03.315","Data":true}# {"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}}{"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}} #  
+2018-12-18 20:40:35.9828 | /api/User/BindMobile # 接口入参 # {"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}} #  
+2018-12-18 20:40:36.5235 | /api/User/BindMobile # 接口出参:{"Code":200,"Message":"操作成功","RespTime":"2018-12-18 20:40:36.177","Data":true}# {"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}}{"bindMobileIn":{"UserId":29,"UserType":1,"Mobile":"1211331"}} #  

@@ -1,0 +1,164 @@
+2018-12-20 14:00:27.0494 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:02:39.7053 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:04:42.1696 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 165
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 81 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:39:52.4710 | System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 149
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 149
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:43:37.6115 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 170
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 170
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:44:29.9996 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 170
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 170
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:50:36.2335 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 171
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 171
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 14:54:26.4713 | System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 169
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 169
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 15:02:20.1230 | System.IO.EndOfStreamException: 尝试读取超出流末尾的内容。
+   在 ProtoBuf.ProtoReader.Ensure(Int32 count, Boolean strict)
+   在 ProtoBuf.ProtoReader.ReadString()
+   在 proto_2(Object , ProtoReader )
+   在 ProtoBuf.Meta.TypeModel.DeserializeCore(ProtoReader reader, Type type, Object value, Boolean noAutoCreate)
+   在 ProtoBuf.Meta.TypeModel.Deserialize(Stream source, Object value, Type type, SerializationContext context)
+   在 ProtoBuf.Serializer.Deserialize[T](Stream source)
+   在 DiYi.Demo.Api.Controllers.DeviceController.PBDeserialize[T](Byte[] data) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 276
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 176
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 System.IO.EndOfStreamException: 尝试读取超出流末尾的内容。
+   在 ProtoBuf.ProtoReader.Ensure(Int32 count, Boolean strict)
+   在 ProtoBuf.ProtoReader.ReadString()
+   在 proto_2(Object , ProtoReader )
+   在 ProtoBuf.Meta.TypeModel.DeserializeCore(ProtoReader reader, Type type, Object value, Boolean noAutoCreate)
+   在 ProtoBuf.Meta.TypeModel.Deserialize(Stream source, Object value, Type type, SerializationContext context)
+   在 ProtoBuf.Serializer.Deserialize[T](Stream source)
+   在 DiYi.Demo.Api.Controllers.DeviceController.PBDeserialize[T](Byte[] data) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 276
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 method) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 176
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 82 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 15:22:15.9568 | System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 15:23:09.3063 | System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.7:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 18:25:59.5117 | System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:2012
+   在 System.Net.Sockets.Socket.Connect(IPAddress[] addresses, Int32 port)
+   在 System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 150
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 20:19:03.2539 | System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 166
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 166
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+
+2018-12-20 20:21:27.3959 | System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 197
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 DiYi.Demo.Api.Controllers.DeviceController.opendevice(String DeviceNo, String UserMobile, Int32 userid) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 197
+   在 DiYi.Demo.Api.Controllers.DeviceController.Open(OpenDeviceInDto openDeviceIn) 位置 D:\work\DiYi.Demo\DiYi.Demo.Api\Controllers\DeviceController.cs:行号 83 
+ <>c__DisplayClass6_2.<GetExecutor>b__2 => <no type>.lambda_method => DeviceController.Open 
+

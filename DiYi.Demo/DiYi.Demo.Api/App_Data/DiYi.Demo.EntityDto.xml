@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DiYi.Demo.EntityDto</name>
+    </assembly>
+    <members>
+        <member name="T:DiYi.Demo.EntityDto.DBEntity.WxUserDevice">
+            <summary>
+            用户绑定设备
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WxUserDevice.DeviceNo">
+            <summary>
+            设备号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WxUserDevice.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WxUserDevice.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WxUserDevice.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.DBEntity.WechatUser">
+            <summary>
+            微信端用户
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Id">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.WxOpenId">
+            <summary>
+            微信公众号OpenId
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.WxUnionId">
+            <summary>
+             微信UnionId
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Photo">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Sex">
+            <summary>
+             性别0未知，1男，2女
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.WxNo">
+            <summary>
+            微信号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.WxSubscribe">
+            <summary>
+            是否关注公众号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.WxSubscribeTime">
+            <summary>
+            微信公众关注时间
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DBEntity.WechatUser.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Dto.MasterMobileInDto">
+            <summary>
+            绑定手机号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.MasterMobileInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.MasterMobileInDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.MasterMobileInDto.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindMobileInDto.Company">
+            <summary>
+            快递公司 
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindMobileInDto.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.UserId">
+            <summary>
+               用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.IDNo">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.Face">
+            <summary>
+            正面照
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.Back">
+            <summary>
+            反面照
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CertUserInDto.Hold">
+            <summary>
+            手持证件照
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.CodeInDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Dto.UnbindMobileInDto">
+            <summary>
+            解除绑定
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.UnbindMobileInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.UnbindMobileInDto.UserType">
+            <summary>
+            用户类别 1:盒子主人，2：快递员
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.UnbindMobileInDto.DeviceNo">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.DeviceNo">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.DevciePwd">
+            <summary>
+            家主密码
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.ProvinceId">
+            <summary>
+            省Id
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.CityId">
+            <summary>
+            市Id
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.AreaId">
+            <summary>
+            区
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.Area">
+            <summary>
+            区
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.BindDeviceInDto.Detail">
+            <summary>
+            门牌号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.DeviceInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.DeviceInDto.DeviceNo">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OpenDeviceInDto.UserId">
+            <summary>
+              用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OpenDeviceInDto.UserType">
+            <summary>
+            用户类别
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OpenDeviceInDto.DeviceNo">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.DeviceOutDto.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.JsapiConfigInDto.Url">
+            <summary>
+            url地址
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Dto.OutDto`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OutDto`1.Code">
+            <summary>
+            返回状态码 
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OutDto`1.Message">
+            <summary>
+            状态码的描述信息
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OutDto`1.RespTime">
+            <summary>
+            服务器返回时间
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OutDto`1.Data">
+            <summary>
+            具体业务数据
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OperBoxInDto.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OperBoxInDto.DeviceNo">
+            <summary>
+            设备号
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Dto.WxUserInfoInDto">
+            <summary>
+              获取登陆者信息
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoInDto.Code">
+            <summary>
+            用户code
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto">
+            <summary>
+               微信获取用户信息返回结果
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.OpenId">
+            <summary>
+               用户的唯一标识
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.HeadImgUrl">
+            <summary>
+            用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.UserId">
+            <summary>
+            系统用户ID
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.IsCourier">
+            <summary>
+            是否是快递员
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.WxUserInfoOutDto.IsMaster">
+            <summary>
+            是否是盒子主人
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Extend.DbColumnAttribute">
+            <summary>
+            数据库列
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.Extend.DbTableAttribute">
+            <summary>
+            数据库表
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.RequestLogType">
+            <summary>
+            请求日志类型
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AdminRequest">
+            <summary>
+            后台请求   
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AppRequest">
+            <summary>
+            前台请求
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AdminException">
+            <summary>
+            后台异常
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AppException">
+            <summary>
+            前台异常
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AdminBadRequest">
+            <summary>
+            后台非法请求   
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.RequestLogType.AppBadRequest">
+            <summary>
+            前台非法请求
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.OperateLogType">
+            <summary>
+            操作日志类型
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.OperateLogType.Login">
+            <summary>
+            登录
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.ResponseCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.Success">
+            <summary>
+            请求(或处理)成功
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.Fail">
+            <summary>
+            请求(或处理)失败
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.Error">
+            <summary>
+            内部请求出错
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.ParameterError">
+            <summary>
+            请求参数不完整或不正确
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.Unauthorized">
+            <summary>
+            未授权标识
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.AuthParameterError">
+            <summary>
+            授权参数不足
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.TokenInvalid">
+            <summary>
+            请求TOKEN失效
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.HttpMehtodError">
+            <summary>
+            HTTP请求类型不合法
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.HttpRequestError">
+            <summary>
+            HTTP请求不合法
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.URLExpireError">
+            <summary>
+            HTTP请求不合法
+            </summary>
+        </member>
+        <member name="F:DiYi.Demo.EntityDto.ResponseCode.NoSignature">
+            <summary>
+            缺少签名
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.ClientUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.DeviceUserType">
+            <summary>
+              用户类别以及绑定的手机
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DeviceUserType.UserType">
+            <summary>
+            类别 0：未知，1:主人，2：快递员
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.DeviceUserType.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.TokenCache.Token">
+            <summary>
+            token值
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.TokenCache.ExpireTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:DiYi.Demo.EntityDto.UserAccessToken">
+            <summary>
+            微信获取access_token返回结果
+            </summary>
+        </member>
+    </members>
+</doc>
