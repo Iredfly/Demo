@@ -67,7 +67,7 @@ namespace DiYi.Demo.Api.Controllers
                     else
                     {
                         clientuser.UserId = user.Id;
-                        var list = userService.GetUserExtend(clientuser.UserId, DeviceNo);
+                        var list = userService.GetUserExtend(clientuser.UserId);
                         if (list != null && list.Count > 0)
                         {
                             if (list.Count == 1)

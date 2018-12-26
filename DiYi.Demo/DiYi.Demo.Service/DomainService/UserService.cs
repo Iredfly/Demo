@@ -163,12 +163,25 @@ namespace DiYi.Demo.Service
         /// <param name="UserId"></param>
         /// <param name="DeviceNo"></param>
         /// <returns></returns>
-        public List<WxUserExtend> GetUserExtend(int UserId, string DeviceNo)
+        public List<WxUserExtend> GetUserExtend(int UserId)
         {
             string sql = "SELECT * FROM user_extend  WHERE UserId=@UserId  AND IsDeleted=0";
-            return QueryList<WxUserExtend>(sql, new { UserId, DeviceNo });
+            return QueryList<WxUserExtend>(sql, new { UserId });
         }
 
+        /// <summary>
+        /// 获取用户绑定信息
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <param name="DeviceNo"></param>
+        /// <returns></returns>
+        public List<OpenDeviceDto> GetUserDevice(int UserId, string DeviceNo)
+        {
+            string sql = @"SELECT ue.UserType,ue.Mobile FROM user_extend ue left JOIN
+user_device ud on ue.UserId = ud.UserId AND ud.IsDeleted = 0
+WHERE ue.UserId =@UserId  AND ue.IsDeleted = 0 AND ud.DeviceNo=@DeviceNo";
+            return QueryList<OpenDeviceDto>(sql, new { UserId, DeviceNo });
+        }
         #endregion
 
     }

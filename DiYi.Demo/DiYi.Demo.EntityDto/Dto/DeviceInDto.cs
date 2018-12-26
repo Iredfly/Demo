@@ -93,4 +93,16 @@ namespace DiYi.Demo.EntityDto.Dto
         public string City { get; set; }
         public string Area { get; set; }
     }
+
+    public class OpenDeviceDto
+    {
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        public int UserType { get; set; }
+        /// <summary>
+        ///  手机号
+        /// </summary>
+        public string Mobile { get; set; }
+    }
 }

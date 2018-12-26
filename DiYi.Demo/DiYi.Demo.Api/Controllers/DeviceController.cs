@@ -70,17 +70,11 @@ namespace DiYi.Demo.Api.Controllers
             OutDto<bool> outDto = new OutDto<bool>();
             try
             {
-                //if (string.IsNullOrEmpty(openDeviceIn.DevcieNo))
-                //{
-                //    openDeviceIn.DevcieNo = DeviceNo;
-                //}
-
-                var list = userService.GetUserExtend(openDeviceIn.UserId, openDeviceIn.DeviceNo);
+                var list = userService.GetUserDevice(openDeviceIn.UserId, openDeviceIn.DeviceNo);
                 var item = list.FirstOrDefault(e => e.UserType == openDeviceIn.UserType);
                 if (item != null)
                 {
-
-                    outDto.Data = opendevice(openDeviceIn.DeviceNo, item.Mobile, item.UserId);
+                    outDto.Data = opendevice(openDeviceIn.DeviceNo, item.Mobile, openDeviceIn.UserId);
                     outDto.Code = (int)ResponseCode.Success;
                 }
                 else
