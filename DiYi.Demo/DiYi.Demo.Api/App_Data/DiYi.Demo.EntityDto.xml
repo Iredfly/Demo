@@ -264,9 +264,29 @@
             设备编号
             </summary>
         </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.DeviceOutDto.DeviceNo">
+            <summary>
+            设备编号
+            </summary>
+        </member>
         <member name="P:DiYi.Demo.EntityDto.Dto.DeviceOutDto.DeviceName">
             <summary>
             设备名称
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OpenDeviceDto.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.OpenDeviceDto.Mobile">
+            <summary>
+             手机号
+            </summary>
+        </member>
+        <member name="P:DiYi.Demo.EntityDto.Dto.UserDeviceDto.UserId">
+            <summary>
+            用户编号
             </summary>
         </member>
         <member name="P:DiYi.Demo.EntityDto.Dto.JsapiConfigInDto.Url">

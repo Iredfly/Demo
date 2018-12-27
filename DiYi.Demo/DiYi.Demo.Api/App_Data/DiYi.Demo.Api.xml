@@ -552,11 +552,6 @@
             测试使用公众号appId
             </summary>
         </member>
-        <member name="F:DiYi.Demo.Api.Controllers.BaseController.DeviceNo">
-            <summary>
-            测试设备编号
-            </summary>
-        </member>
         <member name="T:DiYi.Demo.Api.Controllers.DeviceController">
             <summary>
             设备
@@ -581,6 +576,13 @@
             开箱
             </summary>
             <param name="openDeviceIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiYi.Demo.Api.Controllers.DeviceController.List(DiYi.Demo.EntityDto.Dto.UserDeviceDto)">
+            <summary>
+            获取用户的设备
+            </summary>
+            <param name="deviceDto"></param>
             <returns></returns>
         </member>
         <member name="M:DiYi.Demo.Api.Controllers.DeviceController.Detail(DiYi.Demo.EntityDto.Dto.DeviceInDto)">

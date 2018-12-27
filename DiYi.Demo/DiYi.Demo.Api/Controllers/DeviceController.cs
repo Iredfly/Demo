@@ -33,13 +33,26 @@ namespace DiYi.Demo.Api.Controllers
         [HttpPost]
         public OutDto<bool> Bind(BindDeviceInDto sendCommandIn)
         {
-            if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
-            {
-                sendCommandIn.DeviceNo = DeviceNo;
-            }
             OutDto<bool> ret = new OutDto<bool>();
-            ret.Data = deviceService.bind(sendCommandIn);
-            ret.Code = (int)ResponseCode.Success;
+            int result = deviceService.bind(sendCommandIn);
+            if (result == 0)
+            {
+                ret.Data = true;
+                ret.Message = "绑定成功";
+                ret.Code = (int)ResponseCode.Success;
+            }
+            else if (result < 0)
+            {
+                ret.Data = false;
+                ret.Message = "绑定失败";
+                ret.Code = (int)ResponseCode.Error;
+            }
+            else if (result > 0)
+            {
+                ret.Data = false;
+                ret.Message = "已绑定的设备";
+                ret.Code = (int)ResponseCode.Error;
+            }
             return ret;
         }
         /// <summary>
@@ -50,10 +63,6 @@ namespace DiYi.Demo.Api.Controllers
         [HttpPost]
         public OutDto<bool> UnBind(DeviceInDto sendCommandIn)
         {
-            if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
-            {
-                sendCommandIn.DeviceNo = DeviceNo;
-            }
             OutDto<bool> ret = new OutDto<bool>();
             ret.Data = deviceService.Unbind(sendCommandIn);
             ret.Code = (int)ResponseCode.Success;
@@ -71,15 +80,25 @@ namespace DiYi.Demo.Api.Controllers
             try
             {
                 var list = userService.GetUserDevice(openDeviceIn.UserId, openDeviceIn.DeviceNo);
-                var item = list.FirstOrDefault(e => e.UserType == openDeviceIn.UserType);
-                if (item != null)
+                if (list != null)
                 {
-                    outDto.Data = opendevice(openDeviceIn.DeviceNo, item.Mobile, openDeviceIn.UserId);
-                    outDto.Code = (int)ResponseCode.Success;
+                    var item = list.FirstOrDefault(e => e.UserType == openDeviceIn.UserType);
+                    if (item != null)
+                    {
+                        outDto.Data = opendevice(openDeviceIn.DeviceNo, item.Mobile, openDeviceIn.UserId);
+                        outDto.Code = (int)ResponseCode.Success;
+                    }
+                    else
+                    {
+                        outDto.Data = false;
+                        outDto.Message = "对应用户类型不正确";
+                        outDto.Code = (int)ResponseCode.Error;
+                    }
                 }
                 else
                 {
                     outDto.Data = false;
+                    outDto.Message = "未能找到设备";
                     outDto.Code = (int)ResponseCode.Error;
                 }
             }
@@ -93,6 +112,30 @@ namespace DiYi.Demo.Api.Controllers
         }
 
         /// <summary>
+        /// 获取用户的设备
+        /// </summary>
+        /// <param name="deviceDto"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public OutDto<List<DeviceOutDto>> List(UserDeviceDto deviceDto)
+        {
+            OutDto<List<DeviceOutDto>> outDto = new OutDto<List<DeviceOutDto>>();
+
+            var data = deviceService.GetDevices(deviceDto.UserId);
+            if (data != null)
+            {
+                outDto.Data = data;
+                outDto.Message = "获取成功";
+                outDto.Code = (int)ResponseCode.Success;
+            }
+            else
+            {
+                outDto.Code = (int)ResponseCode.Error;
+                outDto.Message = "获取失败";
+            }
+            return outDto;
+        }
+        /// <summary>
         ///  获取设备信息
         /// </summary>
         /// <param name="deviceIn"></param>
@@ -101,10 +144,6 @@ namespace DiYi.Demo.Api.Controllers
         public OutDto<DeviceOutDto> Detail(DeviceInDto deviceIn)
         {
             OutDto<DeviceOutDto> outDto = new OutDto<DeviceOutDto>();
-            if (string.IsNullOrEmpty(deviceIn.DeviceNo))
-            {
-                deviceIn.DeviceNo = DeviceNo;
-            }
             var data = deviceService.GetDevice(deviceIn.DeviceNo);
             if (data != null)
             {
@@ -166,7 +205,7 @@ namespace DiYi.Demo.Api.Controllers
                             {
                                 str = str.Replace("boxdemo", ""); //boxdemo
                                 var msg = JsonConvert.DeserializeObject<DiYiMsg>(str);
-                                if (msg.Code == "1")
+                                if (msg.Code == "1" && msg.CellStatus == "1")
                                 {
                                     received = true;
                                     break;

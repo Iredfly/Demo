@@ -23,11 +23,6 @@ namespace DiYi.Demo.Api.Controllers
         /// 测试使用公众号appId
         /// </summary>
         public static string WechatAppId = ConfigurationManager.AppSettings["WechatAppId"] ?? "";
-        /// <summary>
-        /// 测试设备编号
-        /// </summary>
-        public static string DeviceNo = ConfigurationManager.AppSettings["DeviceNo"] ?? "";
-
 
         public static RedisService redisService = new RedisService();
         public static readonly Logger logger = LogManager.GetCurrentClassLogger();

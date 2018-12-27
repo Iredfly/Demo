@@ -45,6 +45,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data\DiYi.Demo.Api.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DiYi.Msg, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

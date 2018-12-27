@@ -112,6 +112,7 @@ namespace DiYi.Demo.Service
 
             return ExecuteScalar<int>(sql, t);
         }
+
         public T Get<T>(int id)
         {
             string tableName = GetDbTableName<T>();

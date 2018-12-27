@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,12 @@ namespace DiYi.Demo.EntityDto.Dto
         /// <summary>
         /// 用户编号
         /// </summary>
+        [Required]
         public int UserId { get; set; }
         /// <summary>
         /// 设备编号
         /// </summary>
+        [Required]
         public string DeviceNo { get; set; }
         /// <summary>
         /// 设备名称
@@ -72,6 +75,7 @@ namespace DiYi.Demo.EntityDto.Dto
         /// <summary>
         ///   用户编号
         /// </summary>
+        [Required]
         public int UserId { get; set; }
         /// <summary>
         /// 用户类别
@@ -80,11 +84,17 @@ namespace DiYi.Demo.EntityDto.Dto
         /// <summary>
         /// 设备编号
         /// </summary>
+        [Required]
         public string DeviceNo { get; set; }
     }
 
     public class DeviceOutDto
     {
+        /// <summary>
+        /// 设备编号
+        /// </summary>
+        [Required]
+        public string DeviceNo { get; set; }
         /// <summary>
         /// 设备名称
         /// </summary>
@@ -104,5 +114,14 @@ namespace DiYi.Demo.EntityDto.Dto
         ///  手机号
         /// </summary>
         public string Mobile { get; set; }
+    }
+
+    public class UserDeviceDto
+    {
+        /// <summary>
+        /// 用户编号
+        /// </summary>
+        [Required]
+        public int UserId { get; set; }
     }
 }
