@@ -20,7 +20,7 @@ namespace DiYi.Demo.Service
         public int bind(BindDeviceInDto deviceIn)
         {
 
-            string sql = "Select count(1) From user_device WHERE DeviceNo=@DeviceNo AND IsDeleted=0";
+            string sql = "Select count(1) From user_device WHERE DeviceNo=@DeviceNo AND IsDeleted=0 ";
             int count = ExecuteScalar<int>(sql, new { deviceIn.DeviceNo });
             if (count > 0)
             {
