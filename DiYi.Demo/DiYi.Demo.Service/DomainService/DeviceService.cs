@@ -55,6 +55,32 @@ namespace DiYi.Demo.Service
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="deviceIn"></param>
+        /// <returns></returns>
+        public bool Set(BindDeviceInDto deviceIn)
+        {
+            //string sql = "Select count(1) From user_device WHERE DeviceNo=@DeviceNo AND IsDeleted=0 ";
+            //int count = ExecuteScalar<int>(sql, new { deviceIn.DeviceNo });
+
+
+            string sql = "Select * From user_device WHERE UserId=@UserId AND DeviceNo=@DeviceNo AND IsDeleted=0";
+            var device = QuerySingle<WxUserDevice>(sql, new { deviceIn.UserId, deviceIn.DeviceNo });
+            if (device != null)
+            {
+
+                string upsql = "UPDATE user_device Set DeviceName=@DeviceName,City=@City,Area=@Area where  UserId=@UserId AND DeviceNo=@DeviceNo AND IsDeleted=0";
+                return Execute(upsql, deviceIn);
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         public bool Unbind(DeviceInDto deviceIn)
         {
             string sql = "Update user_device set IsDeleted=1 WHERE UserId=@UserId AND DeviceNo=@DeviceNo ";

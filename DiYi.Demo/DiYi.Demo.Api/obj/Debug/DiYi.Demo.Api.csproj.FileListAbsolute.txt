@@ -180,6 +180,12 @@ D:\work\DiYi.Demo\DiYi.Demo.Api\obj\Debug\DiYi.Demo.Api.csproj.CoreCompileInputs
 D:\work\DiYi.Demo\DiYi.Demo.Api\obj\Debug\DiYi.Demo.Api.csproj.CopyComplete
 D:\work\DiYi.Demo\DiYi.Demo.Api\obj\Debug\DiYi.Demo.Api.dll
 D:\work\DiYi.Demo\DiYi.Demo.Api\obj\Debug\DiYi.Demo.Api.pdb
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.IO.Compression.dll
+D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\VBCSCompiler.exe
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\ApplicationInsights.config
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\NLog.config
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\DiYi.Demo.Api.dll.config
@@ -193,13 +199,9 @@ D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\csi.exe
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\csi.exe.config
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\csi.rsp
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.VisualBasic.Core.targets
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -209,7 +211,6 @@ D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.Console.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.Diagnostics.Process.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.IO.Compression.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.IO.FileSystem.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -232,7 +233,6 @@ D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\System.Xml.XPath.XDocumen
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\vbc.exe
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\vbc.exe.config
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\vbc.rsp
-D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\VBCSCompiler.exe
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\roslyn\VBCSCompiler.exe.config
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\Antlr3.Runtime.dll
 D:\work\github\Demo\DiYi.Demo\DiYi.Demo.Api\bin\DiYi.Demo.Common.dll

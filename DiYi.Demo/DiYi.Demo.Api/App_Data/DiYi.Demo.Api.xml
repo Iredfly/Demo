@@ -578,6 +578,13 @@
             <param name="openDeviceIn"></param>
             <returns></returns>
         </member>
+        <member name="M:DiYi.Demo.Api.Controllers.DeviceController.Set(DiYi.Demo.EntityDto.Dto.BindDeviceInDto)">
+            <summary>
+            设置
+            </summary>
+            <param name="openDeviceIn"></param>
+            <returns></returns>
+        </member>
         <member name="M:DiYi.Demo.Api.Controllers.DeviceController.List(DiYi.Demo.EntityDto.Dto.UserDeviceDto)">
             <summary>
             获取用户的设备

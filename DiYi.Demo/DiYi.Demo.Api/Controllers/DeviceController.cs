@@ -34,6 +34,12 @@ namespace DiYi.Demo.Api.Controllers
         public OutDto<bool> Bind(BindDeviceInDto sendCommandIn)
         {
             OutDto<bool> ret = new OutDto<bool>();
+            if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
+            {
+                ret.Data = false;
+                ret.Message = "绑定失败";
+                ret.Code = (int)ResponseCode.Fail;
+            }
             int result = deviceService.bind(sendCommandIn);
             if (result == 0)
             {
@@ -50,7 +56,7 @@ namespace DiYi.Demo.Api.Controllers
             else if (result > 0)
             {
                 ret.Data = false;
-                ret.Message = "已绑定的设备";
+                ret.Message = "该设备已被绑定";
                 ret.Code = (int)ResponseCode.Error;
             }
             return ret;
@@ -79,13 +85,31 @@ namespace DiYi.Demo.Api.Controllers
             OutDto<bool> outDto = new OutDto<bool>();
             try
             {
-                var list = userService.GetUserDevice(openDeviceIn.UserId, openDeviceIn.DeviceNo);
-                if (list != null)
+                // var list = userService.GetUserDevice(openDeviceIn.UserId, openDeviceIn.DeviceNo);
+                var info = deviceService.GetDevice(openDeviceIn.DeviceNo);
+                if (info == null)
                 {
-                    var item = list.FirstOrDefault(e => e.UserType == openDeviceIn.UserType);
-                    if (item != null)
+                    outDto.Data = false;
+                    outDto.Message = "未能找到设备";
+                    outDto.Code = (int)ResponseCode.Error;
+                    return outDto;
+                }
+                var user = userService.GetUserExtendUserType(info.UserId);
+                if (user == null)
+                {
+                    outDto.Data = false;
+                    outDto.Message = "未能找到盒子主人";
+                    outDto.Code = (int)ResponseCode.Error;
+                    return outDto;
+
+                }
+
+                if (openDeviceIn.UserType == 2)
+                {
+                    var courier = userService.IsCourier(openDeviceIn.UserId);
+                    if (courier)
                     {
-                        outDto.Data = opendevice(openDeviceIn.DeviceNo, item.Mobile, openDeviceIn.UserId);
+                        outDto.Data = opendevice(openDeviceIn.DeviceNo, user.Mobile, openDeviceIn.UserId);
                         outDto.Code = (int)ResponseCode.Success;
                     }
                     else
@@ -97,9 +121,17 @@ namespace DiYi.Demo.Api.Controllers
                 }
                 else
                 {
-                    outDto.Data = false;
-                    outDto.Message = "未能找到设备";
-                    outDto.Code = (int)ResponseCode.Error;
+                    if (user.UserId == openDeviceIn.UserId)
+                    {
+                        outDto.Data = opendevice(openDeviceIn.DeviceNo, user.Mobile, openDeviceIn.UserId);
+                        outDto.Code = (int)ResponseCode.Success;
+                    }
+                    else
+                    {
+                        outDto.Data = false;
+                        outDto.Message = "用户错误";
+                        outDto.Code = (int)ResponseCode.Error;
+                    }
                 }
             }
             catch (Exception ex)
@@ -110,7 +142,36 @@ namespace DiYi.Demo.Api.Controllers
             return outDto;
 
         }
-
+        /// <summary>
+        /// 设置
+        /// </summary>
+        /// <param name="openDeviceIn"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public OutDto<bool> Set(BindDeviceInDto sendCommandIn)
+        {
+            OutDto<bool> ret = new OutDto<bool>();
+            if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
+            {
+                ret.Data = false;
+                ret.Message = "绑定失败";
+                ret.Code = (int)ResponseCode.Fail;
+            }
+            bool result = deviceService.Set(sendCommandIn);
+            if (result)
+            {
+                ret.Data = true;
+                ret.Message = "设置成功";
+                ret.Code = (int)ResponseCode.Success;
+            }
+            else
+            {
+                ret.Data = false;
+                ret.Message = "设置失败";
+                ret.Code = (int)ResponseCode.Error;
+            }
+            return ret;
+        }
         /// <summary>
         /// 获取用户的设备
         /// </summary>

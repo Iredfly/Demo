@@ -168,7 +168,11 @@ namespace DiYi.Demo.Service
             string sql = "SELECT * FROM user_extend  WHERE UserId=@UserId  AND IsDeleted=0";
             return QueryList<WxUserExtend>(sql, new { UserId });
         }
-
+        public WxUserExtend GetUserExtendUserType(int UserId)
+        {
+            string sql = "SELECT * FROM user_extend  WHERE UserId=@UserId  AND IsDeleted=0 AND UserType=1 limit 1";
+            return QuerySingle<WxUserExtend>(sql, new { UserId });
+        }
         /// <summary>
         /// 获取用户绑定信息
         /// </summary>
@@ -181,6 +185,16 @@ namespace DiYi.Demo.Service
 user_device ud on ue.UserId = ud.UserId AND ud.IsDeleted = 0
 WHERE ue.UserId =@UserId  AND ue.IsDeleted = 0 AND ud.DeviceNo=@DeviceNo";
             return QueryList<OpenDeviceDto>(sql, new { UserId, DeviceNo });
+        }
+        /// <summary>
+        /// 是否是快递员
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        public bool IsCourier(int UserId)
+        {
+            string sql = @"SELECT count(1) FROM user_extend  WHERE UserId=@UserId AND UserType=2 AND IsDeleted=0";
+            return QuerySingle<int>(sql, new { UserId }) > 0;
         }
         #endregion
 
