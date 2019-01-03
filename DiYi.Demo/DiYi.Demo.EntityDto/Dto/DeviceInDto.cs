@@ -26,7 +26,7 @@ namespace DiYi.Demo.EntityDto.Dto
         /// <summary>
         /// 家主密码
         /// </summary>
-        public string DevciePwd { get; set; }
+        public string DevicePwd { get; set; }
         /// <summary>
         /// 省Id
         /// </summary>

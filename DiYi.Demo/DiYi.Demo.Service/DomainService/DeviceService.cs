@@ -40,7 +40,7 @@ namespace DiYi.Demo.Service
                     Detail = deviceIn.Detail,
                     DeviceName = deviceIn.DeviceName,
                     DeviceNo = deviceIn.DeviceNo,
-                    DevicePwd = deviceIn.DevciePwd,
+                    DevicePwd = deviceIn.DevicePwd,
                     ProvinceId = deviceIn.ProvinceId,
                     Province = deviceIn.Province,
                     Area = deviceIn.Area,
@@ -70,8 +70,7 @@ namespace DiYi.Demo.Service
             var device = QuerySingle<WxUserDevice>(sql, new { deviceIn.UserId, deviceIn.DeviceNo });
             if (device != null)
             {
-
-                string upsql = "UPDATE user_device Set DeviceName=@DeviceName,City=@City,Area=@Area where  UserId=@UserId AND DeviceNo=@DeviceNo AND IsDeleted=0";
+                string upsql = "UPDATE user_device Set Province=@Province,City=@City,Area=@Area,DevicePwd=@DevicePwd where  UserId=@UserId AND DeviceNo=@DeviceNo AND IsDeleted=0";
                 return Execute(upsql, deviceIn);
             }
             else

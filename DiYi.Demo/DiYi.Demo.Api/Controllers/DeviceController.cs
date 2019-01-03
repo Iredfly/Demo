@@ -37,7 +37,7 @@ namespace DiYi.Demo.Api.Controllers
             if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
             {
                 ret.Data = false;
-                ret.Message = "绑定失败";
+                ret.Message = "绑定失败，缺少设备编号";
                 ret.Code = (int)ResponseCode.Fail;
             }
             int result = deviceService.bind(sendCommandIn);
@@ -151,10 +151,19 @@ namespace DiYi.Demo.Api.Controllers
         public OutDto<bool> Set(BindDeviceInDto sendCommandIn)
         {
             OutDto<bool> ret = new OutDto<bool>();
+
             if (string.IsNullOrEmpty(sendCommandIn.DeviceNo))
             {
                 ret.Data = false;
-                ret.Message = "绑定失败";
+                ret.Message = "缺失失败编号";
+                ret.Code = (int)ResponseCode.Fail;
+                return ret;
+            }
+
+            if (string.IsNullOrEmpty(sendCommandIn.DevicePwd))
+            {
+                ret.Data = false;
+                ret.Message = "缺失设备密码";
                 ret.Code = (int)ResponseCode.Fail;
             }
             bool result = deviceService.Set(sendCommandIn);
@@ -241,88 +250,59 @@ namespace DiYi.Demo.Api.Controllers
 
                 if (!client.Connected)
                 {
-                    client.Connect(SServerHost, SServerPort);
-                    var cmd = new
+                    try
                     {
-                        Msgid = TimeHelper.GetTimeStamp(DateTime.Now, 10),
-                        Method = "2",
-                        AccountName = UserMobile,
-                        DeviceSn = DeviceNo,
-                        DeviceType = "4",
-                        ClientSn = userid.ToString()
-                    };
-                    var sendData = GetSocketRequestData(JsonConvert.SerializeObject(cmd));//请求数据
-                    client.Send(sendData);//发送请求数据
-                    var end = DateTime.Now.AddSeconds(5);
-                    while (!received)
-                    {
-                        byte[] recvBytes = new byte[1024 * 1024];
-                        int length = client.Receive(recvBytes);
-                        if (length >= 0)
+                        client.Connect(SServerHost, SServerPort);
+
+                        var cmd = new
                         {
-                            string str = Encoding.UTF8.GetString(recvBytes, 0, length);
-                            logger.Info("Sock接收：" + str);
-                            if (!string.IsNullOrEmpty(str))
+                            Msgid = TimeHelper.GetTimeStamp(DateTime.Now, 10),
+                            Method = "2",
+                            AccountName = UserMobile,
+                            DeviceSn = DeviceNo,
+                            DeviceType = "4",
+                            ClientSn = userid.ToString()
+                        };
+                        var sendData = GetSocketRequestData(JsonConvert.SerializeObject(cmd));//请求数据
+                        client.Send(sendData);//发送请求数据
+                        var end = DateTime.Now.AddSeconds(5);
+                        while (!received)
+                        {
+                            byte[] recvBytes = new byte[1024 * 1024];
+                            int length = client.Receive(recvBytes);
+                            if (length >= 0)
                             {
-                                str = str.Replace("boxdemo", ""); //boxdemo
-                                var msg = JsonConvert.DeserializeObject<DiYiMsg>(str);
-                                if (msg.Code == "1" && msg.CellStatus == "1")
+                                string str = Encoding.UTF8.GetString(recvBytes, 0, length);
+                                logger.Info("Socket接收：" + str);
+                                if (!string.IsNullOrEmpty(str))
                                 {
-                                    received = true;
+                                    str = str.Replace("boxdemo", ""); //boxdemo
+                                    var msg = JsonConvert.DeserializeObject<DiYiMsg>(str);
+                                    if (msg.Code == "1" && msg.CellStatus == "1")
+                                    {
+                                        received = true;
+                                        break;
+                                    }
                                     break;
                                 }
-                                break;
+                            }
+                            if (received == false && DateTime.Now > end)
+                            {
+                                received = true;
                             }
                         }
-                        if (received == false && DateTime.Now > end)
-                        {
-                            received = true;
-                        }
                     }
-                    //if (received)
-                    //{
-                    //    received = false;
-                    //    var opencmd = new
-                    //    {
-                    //        Msgid = TimeHelper.GetTimeStamp(DateTime.Now, 10),
-                    //        Method = "2",
-                    //        AccountName = UserMobile,
-                    //        DeviceSn = DeviceNo,
-                    //        DeviceType = "4",
-                    //        ClientSn = userid.ToString()
-                    //    };
-                    //    var opensendData = GetSocketRequestData(JsonConvert.SerializeObject(opencmd));//请求数据
-                    //    client.Send(opensendData);//发送请求数据
-
-                    //    while (!received)
-                    //    {
-                    //        byte[] recvBytes = new byte[1024 * 1024];
-                    //        int length = client.Receive(recvBytes);
-                    //        if (length >= 0)
-                    //        {
-                    //            string str = Encoding.UTF8.GetString(recvBytes, 0, length);
-                    //            if (!string.IsNullOrEmpty(str))
-                    //            {
-                    //                logger.Info("Sock接收：" + str);
-                    //                if (str.Length > 7)
-                    //                {
-                    //                    str = str.Substring(7); //boxdemo
-                    //                    var msg = JsonConvert.DeserializeObject<DiYiMsg>(str);
-                    //                    if (msg.Code == "1" && msg.CellStatus == "1")
-                    //                    {
-                    //                        received = true;
-                    //                    }
-                    //                }
-                    //                break;
-                    //            }
-                    //        }
-                    //        if (received == false && DateTime.Now > end)
-                    //        {
-                    //            received = true;
-                    //        }
-                    //    }
-                    //}
+                    catch (Exception ex)
+                    {
+                    }
+                    finally
+                    {
+                        client.Shutdown(SocketShutdown.Both);
+                        client.Close();
+                    }
                 }
+
+                //  client.Dispose();
             }
             return received;
         }
@@ -332,87 +312,9 @@ namespace DiYi.Demo.Api.Controllers
         {
             content = "boxdemo" + content;
             content += "\r\n";
-            logger.Info("Sock发送：" + content);
+            logger.Info("Socket发送：" + content);
             byte[] bytes = Encoding.GetEncoding("gbk").GetBytes(content.ToCharArray(), 0, content.Length);
             return bytes;
-        }
-
-
-
-
-        //private byte[] GetSocketRequestData(string method, string content, string domain = "Post")
-        //{
-        //    //DiYiMsg msg = new DiYiMsg();
-        //    //msg.Method = method;
-        //    //msg.Domain = domain;
-        //    //msg.Content = content;
-        //    var ct = "boxdemo" + content;
-        //    logger.Info("Sock发送：" + ct);
-
-        //    // var data = PBSerialize(msg);
-        //    var data = PBSerialize(ct);
-
-        //    var sendData = SocketProtocal.Parse(data, SocketProtocalType.Command).ToBytes();
-        //    return sendData;
-        //}
-        /// <summary>  
-        /// 截取字节数组  
-        /// </summary>  
-        /// <param name="srcBytes">要截取的字节数组</param>  
-        /// <param name="startIndex">开始截取位置的索引</param>  
-        /// <param name="length">要截取的字节长度</param>  
-        /// <returns>截取后的字节数组</returns>  
-        private byte[] SubByte(byte[] srcBytes, int startIndex, int length)
-        {
-            System.IO.MemoryStream bufferStream = new System.IO.MemoryStream();
-            byte[] returnByte = new byte[] { };
-            if (srcBytes == null) { return returnByte; }
-            if (startIndex < 0) { startIndex = 0; }
-            if (startIndex < srcBytes.Length)
-            {
-                if (length < 1 || length > srcBytes.Length - startIndex) { length = srcBytes.Length - startIndex; }
-                bufferStream.Write(srcBytes, startIndex, length);
-                returnByte = bufferStream.ToArray();
-                bufferStream.SetLength(0);
-                bufferStream.Position = 0;
-            }
-            bufferStream.Close();
-            bufferStream.Dispose();
-            return returnByte;
-        }
-
-
-        /// <summary>
-        /// 序列化
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="t"></param>
-        /// <returns></returns>
-        private byte[] PBSerialize<T>(T t)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                ProtoBuf.Serializer.Serialize<T>(ms, t);
-                byte[] result = new byte[ms.Length];
-                ms.Position = 0;
-                ms.Read(result, 0, result.Length);
-                return result;
-            }
-        }
-        /// <summary>
-        /// 反序列化
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private static T PBDeserialize<T>(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                ms.Write(data, 0, data.Length);
-                ms.Position = 0;
-                return (T)ProtoBuf.Serializer.Deserialize<T>(ms);
-            }
         }
 
         #endregion
